@@ -6,11 +6,13 @@ vim.wo.relativenumber = true
 vim.o.tabstop = 4
 -- 设置自动缩进为 4 个空格
 vim.o.shiftwidth = 4
+vim.o.autoindent = true
 
 
--- True Color 
+-- Style 
 vim.opt.termguicolors = true
-
+vim.o.termguicolors = true
+vim.o.background = "dark"
 
 -- Transparent
 vim.o.transparent = true
