@@ -58,6 +58,10 @@ return{
 					--char = "⏐",
 					highlight = highlight,
 				},
+
+				scope = {
+					enabled = false,
+				}
 			})
 		end
 	},
@@ -89,6 +93,15 @@ return{
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		}
-	}
+	},
 
+
+	-- Mini Animation
+	{ 
+		'echasnovski/mini.nvim', 
+		version = '*',
+		config = function()
+			require('mini.animate').setup()
+		end	
+	},
 }
