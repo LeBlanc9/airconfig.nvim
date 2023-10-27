@@ -53,8 +53,8 @@ return{
 
 			require('ibl').setup({
 				indent = {
-					char = "╎",
-					--char = "│",
+					--char = "╎",
+					char = "│",
 					--char = "⏐",
 					highlight = highlight,
 				},
@@ -78,12 +78,11 @@ return{
 
 
 	-- Noice
-	-- for window input
+	-- for window display 
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		opts = {
-			backgroud_colour = '#000000',
 		},
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries

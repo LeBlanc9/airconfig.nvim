@@ -14,7 +14,7 @@ return{
 				},
 			}
 			-- Call 
-			vim.cmd('colorscheme github_dark')
+			vim.cmd('colorscheme github_dark_high_contrast')
 		end,
 	},
 	
@@ -25,15 +25,15 @@ return{
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup{
-				transparent_background = true, 
+				transparent_background = true,
 				styles = {
 					comments = { "italic" }, -- Change the style of comments
 					keywords = { "bold" },
 				},
 		    	background = { -- :h background
 					light = "latte",
-					--dark = "macchiato",
-					dark = "frappe"
+					dark = "macchiato",
+					--dark = "frappe"
 				},
 				-- Call 
 				--vim.cmd('colorscheme catppuccin')
