@@ -26,4 +26,9 @@ vim.o.termguicolors = true
 
 
 -- 背景颜色方案设置为"dark"，插件、颜色和语法高亮将针对暗背景进行优化。
-vim.opt.background = 'dark'
+-- vim.opt.background = 'dark'
+vim.opt.background = 'light'
+
+
+-- 设置鼠标模式为 c (仅用于复制和滚动)
+vim.o.mouse = "c"

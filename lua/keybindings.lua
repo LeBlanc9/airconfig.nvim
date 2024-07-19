@@ -9,6 +9,7 @@ vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<Leader>m', ':Neotree toggle<CR>', {noremap = true})
 
 
+
 -- Lsp
 vim.api.nvim_set_keymap('n', '<Leader>l', ':LspStart<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>ll', ':LspStop<CR>', {noremap = true})
@@ -25,6 +26,6 @@ vim.api.nvim_set_keymap('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', {noremap = 
 vim.api.nvim_set_keymap('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>', {noremap = true, silent = true})
+
 
 
