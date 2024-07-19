@@ -53,8 +53,8 @@ return{
 
 			require('ibl').setup({
 				indent = {
-					--char = "╎",
-					char = "│",
+					char = "╎",
+					--char = "│",
 					--char = "⏐",
 					highlight = highlight,
 				},
@@ -71,36 +71,17 @@ return{
 	{
 		'akinsho/bufferline.nvim',
 		dependencies = 'nvim-tree/nvim-web-devicons',
+
 		config = function()
-			require("bufferline").setup{}
+			require("bufferline").setup({
+				options = {
+
+				}
+
+			})
 		end
 	},
 
 
-	-- Noice
-	-- for window display 
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {
-		},
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
-		}
-	},
 
-
-	-- Mini Animation
-	{ 
-		'echasnovski/mini.nvim', 
-		version = '*',
-		config = function()
-			require('mini.animate').setup()
-		end	
-	},
 }

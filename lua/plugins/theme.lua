@@ -3,6 +3,7 @@ return{
 	{
 		'projekt0n/github-nvim-theme',
 		priority = 1000,
+
 		config = function()
 			require('github-theme').setup{
 				options = {
@@ -14,7 +15,8 @@ return{
 				},
 			}
 			-- Call 
-			vim.cmd('colorscheme github_dark_high_contrast')
+			vim.cmd('colorscheme github_dark')
+			--vim.cmd('colorscheme github_dark_high_contrast')
 		end,
 	},
 	
@@ -23,6 +25,7 @@ return{
 	{
 		'catppuccin/nvim',
 		priority = 1000,
+
 		config = function()
 			require("catppuccin").setup{
 				transparent_background = true,
@@ -40,11 +43,4 @@ return{
 			}
 		end
 	},
-	
-	
-	--	For Transparent
-	{
-		'xiyaowong/transparent.nvim',
-	}
-
 }
