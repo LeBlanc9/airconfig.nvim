@@ -16,19 +16,33 @@ vim.opt.si = true
 -- 高亮当前行
 vim.opt.cursorline = true
 
--- 弹出菜单的透明度，15是稍微透明，最大值100（全透明）
-vim.opt.pumblend = 15
-
 
 -- Style 
-vim.opt.termguicolors = true
-vim.o.termguicolors = true
-
-
--- 背景颜色方案设置为"dark"，插件、颜色和语法高亮将针对暗背景进行优化。
--- vim.opt.background = 'dark'
-vim.opt.background = 'light'
+-- vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 
 
 -- 设置鼠标模式为 c (仅用于复制和滚动)
 vim.o.mouse = "c"
+
+-- 终端模式 --
+vim.opt.shell = "/bin/bash"
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = "终端退回normal模式" })
+
+
+-- clipboard
+vim.opt.clipboard = "unnamedplus"
+
+vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    },
+}
+
+

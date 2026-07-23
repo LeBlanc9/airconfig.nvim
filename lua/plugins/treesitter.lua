@@ -1,14 +1,15 @@
-return{
-	'nvim-treesitter/nvim-treesitter',
-	build = "TSUpdate",
-	config = function()
-		local configs = require("nvim-treesitter.configs")
+return {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    lazy = false,
+    build = ':TSUpdate',
+    config = function()
+        require('nvim-treesitter.install').prefer_git = true
 
-		configs.setup({
-			ensure_installed = { "c", "cpp", "cuda", "lua", "vim", "vimdoc", "javascript", "html", "python"},
-			sync_install = false,
-			highlight = { enable = true },
-			indent = { enable = true },
-		})
-	end,
+        require('nvim-treesitter.configs').setup({
+            ensure_installed = { "c", "cpp", "cuda", "lua", "vim", "python" },
+            highlight = { enable = true },
+            indent = { enable = true },
+        })
+    end,
 }
