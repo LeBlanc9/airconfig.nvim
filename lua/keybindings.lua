@@ -12,6 +12,7 @@ vim.api.nvim_set_keymap('n', '<Leader>m', ':Neotree toggle<CR>', {noremap = true
 -- Lsp
 vim.api.nvim_set_keymap('n', '<Leader>l', ':LspStart<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>ll', ':LspStop<CR>', {noremap = true})
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "查看当前行错误" })
 
 
 -- Buffer Line --
@@ -27,4 +28,9 @@ vim.keymap.set('n', '<leader>1', '<cmd>BufferLineGoToBuffer 1<cr>', { desc = "bu
 vim.keymap.set('n', '<leader>2', '<cmd>BufferLineGoToBuffer 2<cr>', { desc = "buffer 2" })
 vim.keymap.set('n', '<leader>3', '<cmd>BufferLineGoToBuffer 3<cr>', { desc = "buffer 3" })
 vim.keymap.set('n', '<leader>4', '<cmd>BufferLineGoToBuffer 4<cr>')
+
+
+-- Gitsigns --
+vim.keymap.set('n', '<leader>hr', '<cmd>Gitsigns reset_hunk<cr>', { desc = "恢复当前hunk" })
+vim.keymap.set('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<cr>', { desc = "预览hunk" })
 
